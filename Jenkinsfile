@@ -24,9 +24,9 @@ timestampedNode(env.BUILD_NODE) {
         installDependencies(env.dockerWrapper)
     }
 
-    stage ('Cordova prepare'){
-        cordovaPrepareAndroid(env.dockerWrapper)
-    }
+    // stage ('Cordova prepare'){
+    //     cordovaPrepareAndroid(env.dockerWrapper)
+    // }
 
     stage ('Ionic build'){
         ionicBuild(env.dockerWrapper)
