@@ -47,7 +47,7 @@ def gitCheckoutBranch(branch){
 def prepareDockerWrapper(){
     def gradleCacheDir = "gradle_caches"
     echo ">> Creating docker wrapper"
-    def dockerWrapper = "docker run -v \$(pwd)/${gradleCacheDir}:/root/.gradle/caches -v \$(pwd):/workdir ${env.DOCKER_NAME}:${env.DOCKER_TAG}"
+    def dockerWrapper = "docker run -v \$(pwd)/${gradleCacheDir}:/root/.gradle/caches -v \$(pwd):/workdir ${env.DOCKER_IMAGE_NAME}:${env.DOCKER_IMAGE_TAG}"
     return dockerWrapper;
 }
 
