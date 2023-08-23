@@ -47,15 +47,13 @@ def gitCheckoutBranch(branch){
 def prepareDockerWrapper(){
     def gradleCacheDir = "gradle_caches"
     echo ">> Creating docker wrapper"
-    // def dockerWrapper = "docker run -v \$(pwd)/${gradleCacheDir}:/root/.gradle/caches -v \$(pwd):/workdir ${env.DOCKER_IMAGE_NAME}:${env.DOCKER_IMAGE_TAG}"
-    def dockerWrapper = "docker run -v \$(pwd):/workdir ${env.DOCKER_IMAGE_NAME}:${env.DOCKER_IMAGE_TAG}"
+    def dockerWrapper = "docker run -v \$(pwd)/${gradleCacheDir}:/root/.gradle/caches -v \$(pwd):/workdir ${env.DOCKER_IMAGE_NAME}:${env.DOCKER_IMAGE_TAG}"
     return dockerWrapper;
 }
 
 def installDependencies(dockerWrapper){
     echo ">> Install dependencies"
-    // sh "${dockerWrapper} bash -c 'npm i'"
-    sh "${dockerWrapper} bash -c 'ls'"
+    sh "${dockerWrapper} bash -c 'npm i'"
     
 }
 
