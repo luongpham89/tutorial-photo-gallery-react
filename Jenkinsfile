@@ -59,12 +59,12 @@ def installDependencies(dockerWrapper){
 
 def cordovaPrepareAndroid(dockerWrapper){
     echo ">> Prepare Android"
-    sh "${dockerWrapper} bash -c 'ionic cordova prepare android | xargs echo'"
+    sh "${dockerWrapper} bash -c 'ionic prepare android | xargs echo'"
 }
 
 def ionicBuild(dockerWrapper){
     echo ">> Cordova build android"
-    sh "${dockerWrapper} bash -c 'ionic cordova build android'"
+    sh "${dockerWrapper} bash -c 'ionic build android'"
 }
 
 def timestampedNode(String label = "master", Closure body) {
