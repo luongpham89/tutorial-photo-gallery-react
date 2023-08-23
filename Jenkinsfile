@@ -59,7 +59,7 @@ def installDependencies(dockerWrapper){
 
 def cordovaPrepareAndroid(dockerWrapper){
     echo ">> Prepare Android"
-    sh "${dockerWrapper} bash -c 'cordova prepare android | xargs echo'"
+    sh "${dockerWrapper} bash -c 'ionic cordova prepare android | xargs echo'"
 }
 
 def ionicBuild(dockerWrapper){
