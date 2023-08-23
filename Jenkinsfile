@@ -53,7 +53,9 @@ def prepareDockerWrapper(){
 
 def installDependencies(dockerWrapper){
     echo ">> Install dependencies"
-    sh "${dockerWrapper} bash -c 'npm i'"
+    // sh "${dockerWrapper} bash -c 'npm i'"
+    sh "${dockerWrapper} bash -c 'ls'"
+    
 }
 
 def cordovaPrepareAndroid(dockerWrapper){
