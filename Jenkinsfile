@@ -3,7 +3,7 @@
 // ##########################################################################
 // # Mantainer rcbpeixoto@gmail.com.com
 // ##########################################################################
-env.BRANCH="${params.BRANCH}"
+env.BRANCH="main"
 
 env.GIT_CREDENTIALS_ID="4243cbdf-6dad-48f4-947f-c9cfe3feb138"
 env.GIT_REPO_URL="https://github.com/luongpham89/tutorial-photo-gallery-react.git"
