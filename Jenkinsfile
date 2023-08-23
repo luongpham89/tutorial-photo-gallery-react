@@ -8,5 +8,10 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('Build') {
+            steps {
+                sh 'ionic build'
+            }
+        }
     }
 }
