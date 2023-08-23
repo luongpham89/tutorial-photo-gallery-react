@@ -10,7 +10,7 @@ env.GIT_REPO_URL="https://github.com/luongpham89/tutorial-photo-gallery-react.gi
 
 env.DOCKER_IMAGE_NAME="ionic-builder"
 env.DOCKER_IMAGE_TAG="latest"
-env.BUILD_NODE="any"
+env.BUILD_NODE="master"
 
 timestampedNode(env.BUILD_NODE) {
     stage('Checkout') {
